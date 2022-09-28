@@ -1,0 +1,13 @@
+[user]
+	name = corradijoaquin(elementaryOS)
+	email = corradijoaquin@gmail.com
+[core]
+	editor = "codium --wait"
+	autocrlf = input
+[color]
+	ui = true
+[credential]
+#This saves the PAT
+	helper = store
+[init]
+	defaultBranch = main
