@@ -6,8 +6,5 @@
 	autocrlf = input
 [color]
 	ui = true
-[credential]
-#This saves the PAT
-	helper = store
 [init]
 	defaultBranch = main
