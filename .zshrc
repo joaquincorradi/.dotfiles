@@ -41,4 +41,19 @@ compinit
 _comp_options+=(globdots)		# Include hidden files.
 
 # Path to sh scripts:
-export PATH=$PATH:~/Documentos/ufetch/
+# export PATH=$PATH:~/Documentos/ufetch/
+
+# Default editor
+export EDITOR=nvim
+
+# Aliases
+alias gs="git status"
+alias n="neofetch"
+alias fu="flatpak update"
+alias la="ls -a"
+alias pokemon='pokemon-colorscripts'
+
+# Load at beggining
+# /usr/bin/neofetch
+# neofetch
+# pokemon-colorscripts -r
