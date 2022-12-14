@@ -1,6 +1,6 @@
 # Prompt
 autoload -U colors && colors
-PROMPT=' %1~ %# %'
+PROMPT=' %1~ %# '
 
 autoload -Uz add-zsh-hook vcs_info
 zstyle ':vcs_info:*' check-for-changes true
@@ -23,16 +23,23 @@ bindkey -v
 zstyle :compinstall filename '/home/joaquin/.zshrc'
 
 # Load zsh-syntax-highlighting:
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[path]=none
-ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+# source ~/.config/zsh/plugins/zsh-syntax-highlighting//zsh-syntax-highlighting.zsh 2>/dev/null
+# (( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+# ZSH_HIGHLIGHT_STYLES[path]=none
+# ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+# ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+
+# Gruvbox loading test
+source ~/.config/zsh/plugins/gruvbox_256palette.sh
 
 #Load zsh-autosugestions:
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Load fast-syntax-highlighting
+source ~/.config/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Basic auto/tab complete:
-# autoload -U compinit
+autoload -U compinit
 autoload -Uz compinit && compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
@@ -40,18 +47,30 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# Path to sh scripts:
-# export PATH=$PATH:~/Documentos/ufetch/
+# Add to path:
+# export PATH=$PATH:/usr/local/go/bin
 
 # Default editor
 export EDITOR=nvim
 
 # Aliases
 alias gs="git status"
-alias n="neofetch"
+alias neof="neofetch"
 alias fu="flatpak update"
 alias la="ls -a"
 alias pokemon='pokemon-colorscripts'
+alias ls="exa --all --icons"
+alias la="exa --all --binary --long --git --grid --icons"
+alias f="fish"
+alias nconf="nvim ~/.config/nvim"
+alias nconfig="nvim ~/.config/nvim"
+alias n="nvim"
+
+# Golang
+export GOPATH="$HOME/Code/go/"
+# export PATH="$PATH:$GOPATH/bin"
+# export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
 
 # Load at beggining
 # /usr/bin/neofetch
