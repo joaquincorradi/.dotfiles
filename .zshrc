@@ -47,9 +47,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# Add to path:
-# export PATH=$PATH:/usr/local/go/bin
-
 # Default editor
 export EDITOR=nvim
 
@@ -57,10 +54,11 @@ export EDITOR=nvim
 alias gs="git status"
 alias neof="neofetch"
 alias fu="flatpak update"
-alias la="ls -a"
 alias pokemon='pokemon-colorscripts'
-alias ls="exa --all --icons"
-alias la="exa --all --binary --long --git --grid --icons"
+alias ls="exa --icons --classify"
+alias la="exa --all --icons --classify"
+alias ll="exa --all --long --grid --binary --git --icons"
+alias tree="exa --tree --icons"
 alias f="fish"
 alias nconf="nvim ~/.config/nvim"
 alias nconfig="nvim ~/.config/nvim"
@@ -68,11 +66,5 @@ alias n="nvim"
 
 # Golang
 export GOPATH="$HOME/Code/go/"
-# export PATH="$PATH:$GOPATH/bin"
 # export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
-
-# Load at beggining
-# /usr/bin/neofetch
-# neofetch
-# pokemon-colorscripts -r
