@@ -68,3 +68,6 @@ alias n="nvim"
 export GOPATH="$HOME/Code/go/"
 # export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$GOPATH/bin:/usr/local/go/bin"
+
+#Rust
+export PATH="$HOME/.cargo/bin:$PATH"
