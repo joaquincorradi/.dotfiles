@@ -1,55 +1,73 @@
 {
-    //General edit config
-    "editor.tabSize": 2,
-    "editor.cursorStyle": "block",
-    "editor.minimap.enabled": false,
-    
-    //Font config
-    "editor.fontFamily": "'Victor Mono'",
-    "editor.fontSize": 14,
-    "editor.fontWeight": "650",
-    "editor.fontLigatures": true,
+  //General edit config
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
 
-    //Theming
-    "workbench.colorTheme": "Gruvbox Dark Hard",
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
-    "workbench.productIconTheme": "material-product-icons",
+  //Font config
+  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontSize": 15.5,
+  "editor.fontWeight": "normal",
+  "editor.fontLigatures": true,
 
-    //Sidebar location
-    "workbench.sideBar.location": "left",
+  //Theming
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
+  "workbench.productIconTheme": "material-product-icons",
 
-    //Italic style
-    "editor.tokenColorCustomizations": {
-        "textMateRules": [
-          {
-            "scope": [
-              //following will be in italic (=FlottFlott)
-              "comment",
-              "entity.name.type.class", //class names
-              "keyword", //import, export, return…
-              "constant", //String, Number, Boolean…, this, super
-              "storage.modifier", //static keyword
-              "storage.type.class.js", //class keyword
-            ],
-            "settings": {
-              "fontStyle": "italic"
-            }
-          },
-          {
-            "scope": [
-              //following will be excluded from italics (VSCode has some defaults for italics)
-              "invalid",
-              "keyword.operator",
-              "constant.numeric.css",
-              "keyword.other.unit.px.css",
-              "constant.numeric.decimal.js",
-              "constant.numeric.json"
-            ],
-            "settings": {
-              "fontStyle": ""
-            }
-          }
-        ]
+  //Sidebar location
+  "workbench.sideBar.location": "left",
+
+  //Italic style
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          //following will be in italic (=FlottFlott)
+          "comment",
+          "entity.name.type.class", //class names
+          "keyword", //import, export, return…
+          "constant", //String, Number, Boolean…, this, super
+          "storage.modifier", //static keyword
+          "storage.type.class.js" //class keyword
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
       },
+      {
+        "scope": [
+          //following will be excluded from italics (VSCode has some defaults for italics)
+          "invalid",
+          "keyword.operator",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.js",
+          "constant.numeric.json"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
+  "terminal.integrated.env.linux": {},
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "editor.cursorBlinking": "smooth",
+  "[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+  }
 }
