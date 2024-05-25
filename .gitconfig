@@ -1,8 +1,8 @@
 [user]
-	name = corradijoaquin(elementaryOS)
+	name = joaquincorradi
 	email = corradijoaquin@gmail.com
 [core]
-	editor = "codium --wait"
+	editor = "code --wait"
 	autocrlf = input
 [color]
 	ui = true
